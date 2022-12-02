@@ -71,7 +71,7 @@ import { useEffect } from 'react';
     <div className="App">
       <Searchbar onSubmit={searchImg} />
       <ImageGallery pictures={pictures} onClick={onModalOpen} />
-      {pictures.length > hideBtn && <Button onClick={onClickLoadMore} />}
+      {pictures.length > 0 && hideBtn && <Button onClick={onClickLoadMore} />}
 
       {modalImg && <Modal closeModal={onModalClose} url={modalImg} />}
 
